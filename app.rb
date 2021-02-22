@@ -8,5 +8,5 @@ class BookmarkManager < Sinatra::Base
     erb(:index)
   end
 
-  run! if app_file == BOOKMARK_MANAGER
+  run! if app_file == BookmarkManager
 end
