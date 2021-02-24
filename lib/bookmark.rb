@@ -4,9 +4,8 @@ class Bookmark
 
 def self.all
   connection = PG.connect :dbname => 'bookmark_manager'
-  conn = connection.exec('SELECT * FROM bookmarks')
-  conn.map do |item|
-    item['url']
+  result = connection.exec('SELECT * FROM bookmarks')
+  result.map { |bookmark| bookmark['url'] }
   end
   # conn.each do |item|
   #   item.each do |key, value|
@@ -16,6 +15,4 @@ def self.all
   # conn.each do |key, value|
   #    return value
   # end
-end
-
 end
