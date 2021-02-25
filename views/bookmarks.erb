@@ -1,7 +1,10 @@
 <ul>
   <% @bookmarks.map do |bookmark| %>
-  <li><%= bookmark %></li>
-  <% end %>
+  <li><%= bookmark %>
+  <a href="<%= bookmark.url %>">
+        <%= bookmark.title %>
+        </li>
+        <% end %>
 </ul>
 <form action="/bookmarks/new" method="get">
 <input type="submit" value="add new bookmark">
