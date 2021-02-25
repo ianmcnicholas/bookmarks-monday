@@ -10,3 +10,5 @@ gem 'rspec'
 gem 'rubocop'
 gem 'simplecov'
 gem 'sinatra'
+
+gem "shotgun", "~> 0.9.2"
